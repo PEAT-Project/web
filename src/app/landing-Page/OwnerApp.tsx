@@ -117,7 +117,7 @@ export default function OwnerApp() {
               className="relative flex items-center justify-center"
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
-              variants={phoneVariants}
+              variants={phoneVariants as any}
             >
               {/* Decorative elements */}
               <motion.div
@@ -241,7 +241,7 @@ export default function OwnerApp() {
               {/* Feature list with improved styling */}
               <motion.ul
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
-                variants={containerVariants}
+                variants={containerVariants as any}
                 initial="hidden"
                 animate={isVisible ? "visible" : "hidden"}
               >
@@ -249,7 +249,7 @@ export default function OwnerApp() {
                   <motion.li
                     key={index}
                     className="flex items-start bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-amber-500"
-                    variants={itemVariants}
+                    variants={itemVariants as any}
                   >
                     <div className="mr-3 bg-amber-100 p-2 rounded-lg">
                       {feature.icon}

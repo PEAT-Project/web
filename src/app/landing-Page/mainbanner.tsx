@@ -46,9 +46,9 @@ export default function MainBanner() {
         className="flex flex-col items-center text-center gap-8 md:py-[10vh] pt-20 max-w-4xl z-10"
         initial="hidden"
         animate="visible"
-        variants={containerVariants}
+        variants={containerVariants as any}
       >
-        <motion.div variants={itemVariants} className="space-y-2">
+  <motion.div variants={itemVariants as any} className="space-y-2">
           <span className="inline-block bg-[#F8A71B] text-black px-4 py-1 rounded-full text-sm font-medium tracking-wide mb-4 animate-pulse">
             #1 PARKING SERVICE
           </span>
@@ -64,7 +64,7 @@ export default function MainBanner() {
         </motion.div>
 
         <motion.div
-          variants={itemVariants}
+          variants={itemVariants as any}
           className="mt-8 flex flex-col md:flex-row gap-4"
         >
           <button className="flex items-center justify-center gap-2 bg-[#F8A71B] text-white px-8 py-4 text-lg rounded-lg font-medium transition-transform transform hover:scale-105 hover:shadow-xl">

@@ -110,11 +110,11 @@ export default function CustomerApp() {
             md={12}
             className="flex justify-center mb-12 md:mb-0"
           >
-            <motion.div
+              <motion.div
               className="relative flex items-center justify-center"
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
-              variants={phoneVariants}
+              variants={phoneVariants as any}
             >
               {/* Decorative elements */}
               <motion.div
@@ -197,7 +197,7 @@ export default function CustomerApp() {
 
           {/* Right Column - Features & CTA */}
           <Col xs={24} sm={24} md={12} className="px-6 md:px-10">
-            <motion.div
+              <motion.div
               className="max-w-lg mx-auto md:mx-0 bg-white/10 backdrop-filter backdrop-blur-lg p-8 rounded-2xl"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 30 }}
@@ -236,7 +236,7 @@ export default function CustomerApp() {
               {/* Feature list with improved styling */}
               <motion.ul
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
-                variants={containerVariants}
+                variants={containerVariants as any}
                 initial="hidden"
                 animate={isVisible ? "visible" : "hidden"}
               >
@@ -244,7 +244,7 @@ export default function CustomerApp() {
                   <motion.li
                     key={index}
                     className="flex items-start bg-white/20 p-3 rounded-lg border-l-4 border-white hover:bg-white/30 transition-all duration-300"
-                    variants={itemVariants}
+                    variants={itemVariants as any}
                   >
                     <div className="mr-3 bg-white/30 p-2 rounded-lg">
                       {feature.icon}
