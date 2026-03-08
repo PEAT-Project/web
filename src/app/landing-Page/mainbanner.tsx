@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 export default function MainBanner() {
   const [scrollY, setScrollY] = useState(0);
+  const router = useRouter();
+  const basePath = (router as any)?.basePath || "";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +41,7 @@ export default function MainBanner() {
       className="relative md:min-h-screen bg-cover bg-center flex items-center justify-center text-center px-4 min-h-[80vh] overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),url('/assets/images/background.jpg')",
+          `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),url('${basePath}/assets/images/background.jpg')`,
         backgroundPosition: `center ${scrollY * 0.5}px`,
       }}
     >

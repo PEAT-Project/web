@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   IoLocationOutline,
@@ -76,7 +77,19 @@ const Contact = () => {
       {/* Hero Section */}
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-amber-100 z-0" />
-  <div className="absolute inset-0 bg-[url('/assets/images/parking-pattern.png')] bg-no-repeat bg-cover opacity-5 z-0" />
+  {/* background pattern - use runtime basePath so it works on project pages */}
+  {(() => {
+    const router = useRouter();
+    const basePath = (router as any)?.basePath || "";
+    return (
+      <div
+        className="absolute inset-0 bg-no-repeat bg-cover opacity-5 z-0"
+        style={{
+          backgroundImage: `url('${basePath}/assets/images/parking-pattern.png')`,
+        }}
+      />
+    );
+  })()}
 
         <div className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div

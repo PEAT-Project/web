@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { IoMdClose } from "react-icons/io";
 import { CiMenuBurger } from "react-icons/ci";
@@ -11,6 +12,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  // Prefer build-time env var (NEXT_PUBLIC_BASE_PATH), then runtime router.basePath
+  const basePath =
+    process.env.NEXT_PUBLIC_BASE_PATH || (router as any)?.basePath || "";
 
   // Handle scroll effect - always active
   useEffect(() => {
@@ -87,7 +92,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 transition-all duration-300">
             <Link href="/">
               <Image
-                src="assets/images/logo.png"
+                src={`${basePath}/assets/images/logo.png`}
                 width={scrolled ? 64 : 80}
                 height={scrolled ? 64 : 80}
                 className={`transition-all duration-300 ${
@@ -155,7 +160,7 @@ const Navbar = () => {
               <div className="flex justify-between items-center mb-10">
                 <Link href="/">
                   <Image
-                    src="assets/images/logo.png"
+                    src={`${basePath}/assets/images/logo.png`}
                     width={64}
                     height={64}
                     className="h-16"

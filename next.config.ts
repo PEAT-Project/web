@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
   // these two options so the site is served from the root.
   basePath: "/web",
   assetPrefix: "/web",
+  // Expose the base path at build time so components can prefix public asset URLs
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "/web",
+  },
   // Keep other default options; static export will write to `out/`.
 };
 
