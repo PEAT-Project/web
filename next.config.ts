@@ -11,8 +11,14 @@ const nextConfig: NextConfig = {
   // fully-exported static site suitable for GitHub Pages.
   // See: https://nextjs.org/docs/app/building-your-application/deploying/static-exports
   output: "export",
-  // Keep other default options; static export will write to `out/` when
-  // using `next export`.
+  // If we're deploying to a GitHub project page (https://<org>.github.io/<repo>),
+  // the site needs a basePath so all asset and route URLs include the repo name.
+  // This repo is named `web`, so set the basePath and assetPrefix to `/web`.
+  // If you plan to use a custom domain (like `lankahost.net`) instead, remove
+  // these two options so the site is served from the root.
+  basePath: "/web",
+  assetPrefix: "/web",
+  // Keep other default options; static export will write to `out/`.
 };
 
 export default nextConfig;

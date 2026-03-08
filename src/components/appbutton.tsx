@@ -16,7 +16,7 @@ const AppButton: React.FC<AppButtonProps> = ({
       <a href={playStoreLink} target="_blank" rel="noopener noreferrer">
         <Image
           className="h-10 sm:h-12 md:h-14 mx-auto sm:mx-0"
-          src="/assets/images/google-play-6647242_1280.png"
+          src="assets/images/google-play-6647242_1280.png"
           width={168}
           height={56}
           alt="Play Store"
@@ -25,7 +25,7 @@ const AppButton: React.FC<AppButtonProps> = ({
       <a href={appStoreLink} target="_blank" rel="noopener noreferrer">
         <Image
           className="h-11 sm:h-12 md:h-14 mx-auto sm:mx-0"
-          src="/assets/images/Download_on_the_App_Store_RGB_blk.svg.png"
+          src="assets/images/Download_on_the_App_Store_RGB_blk.svg.png"
           width={168}
           height={56}
           alt="App Store"
