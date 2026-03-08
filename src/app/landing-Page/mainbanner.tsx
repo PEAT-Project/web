@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function MainBanner() {
   const [scrollY, setScrollY] = useState(0);
-  const router = useRouter();
-  const basePath = (router as any)?.basePath || "";
 
   useEffect(() => {
     const handleScroll = () => {

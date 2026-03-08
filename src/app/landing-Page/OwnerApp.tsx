@@ -13,6 +13,8 @@ import {
 } from "react-icons/md";
 import { motion } from "framer-motion";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function OwnerApp() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -146,7 +148,7 @@ export default function OwnerApp() {
                 <motion.div className="relative z-10 drop-shadow-2xl">
                   <motion.img
                     className="w-35 sm:w-56 md:w-60 lg:w-72 object-contain"
-                    src="assets/images/samsung-galaxy-still(11).png"
+                    src={`${basePath}/assets/images/samsung-galaxy-still(11).png`}
                     alt="PEAT Owner App Mockup"
                     animate={{
                       y: [0, -8, 0],
