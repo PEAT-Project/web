@@ -92,7 +92,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 transition-all duration-300">
             <Link href="/">
               <Image
-                src={`${basePath}/assets/images/logo.png`}
+                src={`assets/images/logo.png`}
                 width={scrolled ? 64 : 80}
                 height={scrolled ? 64 : 80}
                 className={`transition-all duration-300 ${
@@ -160,7 +160,7 @@ const Navbar = () => {
               <div className="flex justify-between items-center mb-10">
                 <Link href="/">
                   <Image
-                    src={`${basePath}/assets/images/logo.png`}
+                    src={`assets/images/logo.png`}
                     width={64}
                     height={64}
                     className="h-16"

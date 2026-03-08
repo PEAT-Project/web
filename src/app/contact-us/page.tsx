@@ -85,7 +85,7 @@ const Contact = () => {
       <div
         className="absolute inset-0 bg-no-repeat bg-cover opacity-5 z-0"
         style={{
-          backgroundImage: `url('${basePath}/assets/images/parking-pattern.png')`,
+          backgroundImage: `url('assets/images/parking-pattern.png')`,
         }}
       />
     );
