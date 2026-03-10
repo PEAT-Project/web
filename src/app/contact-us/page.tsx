@@ -77,7 +77,7 @@ const Contact = () => {
       {/* Hero Section */}
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-amber-100 z-0" />
-  {/* background pattern - use runtime basePath so it works on project pages */}
+  {/* background pattern - use runtime basePath so it works on project pages ha */}
   {(() => {
     const router = useRouter();
     const basePath = (router as any)?.basePath || "";
